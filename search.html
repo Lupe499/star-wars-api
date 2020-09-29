@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="style.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrapper">
+
+<header>
+    <a href="index.html">
+        <h1>
+            Pokedex
+        </h1>
+    </a>
+</header>
+    
+<main class="indexMain">
+    <form action="">
+        <input type="search" name="keyword"/>
+        <button type="submit">Search</button>
+    </form>
+    
+    <ul class="pokeList">
+        
+    </ul>
+    
+    <a class="prevLink" href="">Previous</a> | <a class="nextLink" href="">Next</a>
+    <button class="spinner"><!-- <div class="pokeBallMid"></div> --></button>
+</main>
+
+<template id="template">
+    <li class="templateCard">
+            <a href="" class="pokeName"></a>
+    </li>
+</template>
+
+</div> <!-- end wrapper -->
+    
+    <script src="/search.js"></script>
+</body>
+</html>
