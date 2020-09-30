@@ -1,5 +1,5 @@
 let url = new URLSearchParams(window.location.search);
-let theCharacter = document.querySelector(".theCharacter");
+let thePlanet = document.querySelector(".thePlanet");
 if (url.has("id")) {
     //fetch(`https://pokeapi.co/api/v2/pokemon/${url.get("id")}`)
     fetch(`https://swapi.dev/api/planets/${url.get("id")}`)
@@ -7,21 +7,18 @@ if (url.has("id")) {
     .then(function(data) {
         console.log(data);
 
-        theCharacter.innerHTML = `
+        thePlanet.innerHTML = `
         <h2 class="character_name">${data.name}</h2>
-        <div class="infoDiv">
-            <p class="character_Bdata">Birth year: ${data.birth_year}</p>
-            <p class="character_gender">Gender: ${data.gender}</p>
-            <p class="character_height">Height: ${data.height}cm</p>
-            <a class="character_link_planet" href="">planet</a>
+        <div class="infoDiv1">
+            <p class="planet_climate">${data.name}'s climate: ${data.climate}</p>
+            <p class="planet_diameter">${data.name}'s diameter: ${data.diameter}km</p>
+            <p class="planet_gravity">${data.name}'s gravity: ${data.gravity}</p>
         </div>
-        <div class="infoDiv">
-            <p class="character_hair_color">Hair color: ${data.hair_color}</p>
-            <p class="character_eye_color">Eye color: ${data.eye_color}</p>
-            <p class="character_skin_color">Skin color: ${data.skin_color}</p>
+        <div class="infoDiv2">
+            <p class="planet_orbital_period">${data.name}'s orbital period: ${data.orbital_period}</p>
+            <p class="planet_population">${data.name}'s population: ${data.population}</p>
+            <p class="planet_rotation_period">${data.name}'s rotation period: ${data.rotation_period}</p>
         </div>
         `
-        let link = document.querySelector(".character_link_planet");
-        link.querySelector(".products__productName").href = `./planet.html?id=${id}`;
     });
 }   

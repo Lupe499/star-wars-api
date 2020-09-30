@@ -11,7 +11,9 @@ p{
     line-height:1.3;
     white-space: pre-line;
 }
-
+.theCharacter a{
+    color: white;
+}
 img{
 	width:100%;
 	height:auto;	
@@ -129,10 +131,10 @@ a{
     font-size: 10px;
     color: white;
 }
-.theCharacter{
+.theCharacter, .thePlanet{
     display: grid;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 800px;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     border: solid 2px black;
