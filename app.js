@@ -27,7 +27,6 @@ fetch(`https://swapi.dev/api/people/?page=${page}`)
             let array = result.url.split("/");
             //console.log(array);
             
-            
             const characters = document.createElement('div');
             characters.classList.add('characters');
             
