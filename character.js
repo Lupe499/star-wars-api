@@ -14,14 +14,20 @@ if (url.has("id")) {
             <p class="character_gender">Gender: ${data.gender}</p>
             <p class="character_height">Height: ${data.height}cm</p>
             <a class="character_link_planet" href="">${data.name}'s Planet</a>
-        </div>
-        <div class="infoDiv2">
+            </div>
+            <div class="infoDiv2">
             <p class="character_hair_color">Hair color: ${data.hair_color}</p>
             <p class="character_eye_color">Eye color: ${data.eye_color}</p>
             <p class="character_skin_color">Skin color: ${data.skin_color}</p>
+            <a class="character_link_starship" href="">${data.name}'s Starship/Starships</a>
         </div>
         `
-
+        
+        if (data.starships.length == 0){
+            document.querySelector(".character_link_starship").style.display = "none"
+        }else{
+            document.querySelector(".character_link_starship").style.display = "inline"
+        }
 
 
             let array = data.homeworld.split("/");
