@@ -26,15 +26,14 @@ fetch(`https://swapi.dev/api/people/?page=${page}`)
         data.results.forEach(function (result) {
             let array = result.url.split("/");
             //console.log(array);
-            
-            
+
             const characters = document.createElement('div');
             characters.classList.add('characters');
             
             characters.innerHTML = `
             <a href="" class="products__productName">${result.name}</a>
         `
-            let id = array[array.length - 2];
+            let id = array[array.length - 2]; 
             characters.querySelector(".products__productName").href = `./character-sheet.html?id=${id}`;
             allcharacters.appendChild(characters);
         });
