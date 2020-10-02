@@ -22,12 +22,21 @@ if (url.has("id")) {
             <a class="character_link_starship" href="">${data.name}'s Starship/Starships</a>
         </div>
         `
-        
+
         if (data.starships.length == 0){
             document.querySelector(".character_link_starship").style.display = "none"
         }else{
             document.querySelector(".character_link_starship").style.display = "inline"
         }
+
+        data.starships.forEach(function (starship) {
+            console.log(starship)
+            let starshipArray = starship.split("/");
+            //console.log(starshipId);
+            let starshipId = starshipArray[starshipArray.length - 2];
+            let starshipLink = document.querySelector(".infoDiv2");
+            starshipLink.querySelector(".character_link_starship").href = `./starships.html?id=${starshipId}`;
+        });
 
 
             let array = data.homeworld.split("/");
